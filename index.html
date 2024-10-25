@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trail Tracker - Discover Hiking Trails</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="theme-color" content="#4CAF50">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Trail Tracker</div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/trails/">Trails</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/settings/">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="hero">
+            <h1>Discover Your Next Adventure</h1>
+            <p>Find and track hiking trails in your area</p>
+            <a href="/trails/" class="cta-button">Explore Trails</a>
+        </div>
+        <div class="featured-trails">
+            <h2>Featured Trails</h2>
+            <div class="trail-cards" id="trailList">
+                <!-- Trail cards will be loaded here -->
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Trail Tracker</p>
+    </footer>
+    <script src="/js/script.js"></script>
+</body>
+</html>

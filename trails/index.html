@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trail Listings - Trail Tracker</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Trail Tracker</div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/trails/">Trails</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/settings/">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Available Trails</h1>
+        <div class="deep-link-test">
+            <h2>Deep Linking Test</h2>
+            <p>Try these deep links:</p>
+            <ul>
+                <li><a href="?trail=mountain-vista">Deep link to Mountain Vista Trail</a></li>
+                <li><a href="?trail=forest-loop">Deep link to Forest Loop</a></li>
+            </ul>
+        </div>
+        <div class="trail-cards" id="trailList">
+            <!-- Trail cards will be inserted here by JavaScript -->
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Trail Tracker</p>
+    </footer>
+    <script src="/js/script.js"></script>
+</body>
+</html>

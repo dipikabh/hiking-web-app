@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Trail Tracker</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Trail Tracker</div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/trails/">Trails</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/settings/">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Settings</h1>
+        <div class="settings-content">
+            <section class="settings-section">
+                <h2>Display Preferences</h2>
+                <div class="setting-item">
+                    <label for="units">Distance Units</label>
+                    <select id="units">
+                        <option value="km">Kilometers</option>
+                        <option value="mi">Miles</option>
+                    </select>
+                </div>
+            </section>
+
+            <section class="settings-section">
+                <h2>App Information</h2>
+                <div class="setting-item">
+                    <p>Version: 1.0</p>
+                    <p>Storage used: 0.5 MB</p>
+                </div>
+            </section>
+
+            <section class="settings-section">
+                <h2>Display Information</h2>
+                <div class="setting-item">
+                    <p id="displayMode">Current display mode: checking...</p>
+                    <p class="display-note">This information helps test different manifest display modes.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Trail Tracker</p>
+    </footer>
+    <script src="/js/script.js"></script>
+</body>
+</html>

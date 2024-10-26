@@ -1,24 +1,34 @@
 {
   "trails": [
     {
-      "id": "mountain-vista",
-      "name": "Mountain Vista Trail",
+      "id": "saratoga-gap-trail",
+      "name": "Saratoga Gap Trail",
       "difficulty": "moderate",
-      "length": "5.2 km",
-      "elevation": "350m",
-      "location": "North Ridge",
-      "conditions": "Open, good conditions",
-      "description": "A scenic trail offering panoramic mountain views"
+      "length": "7.9 km",
+      "elevation": "313m",
+      "location": "Castle Rock State Park",
+      "conditions": "Open year-round. Trail has rocky sections, some poison oak. Mostly shaded with some sun exposure. $10 parking fee.",
+      "description": "A popular loop trail featuring rock scrambles, ridge walks with rope-assisted sections, and beautiful mountain views. Trail varies from exposed rock terraces to shaded redwood forests. Best done counter-clockwise."
     },
     {
-      "id": "forest-loop",
-      "name": "Forest Loop",
+      "id": "sawyer-camp-trail",
+      "name": "Sawyer Camp Trail",
       "difficulty": "easy",
-      "length": "3.1 km",
-      "elevation": "120m",
-      "location": "Pine Valley",
-      "conditions": "Open, muddy in spots",
-      "description": "A peaceful forest trail perfect for beginners"
+      "length": "18.7 km",
+      "elevation": "139m",
+      "location": "Lower Crystal Springs Reservoir",
+      "conditions": "Open year-round. Paved trail, well-maintained. Popular for walking, running, and cycling.",
+      "description": "A scenic trail along Crystal Springs Reservoir with gentle elevation changes. Perfect for families and beginners, offering water views and wildlife spotting opportunities."
+    },
+    {
+      "id": "purisima-creek-trail",
+      "name": "Purisima Creek Trail",
+      "difficulty": "difficult",
+      "length": "13.1 km",
+      "elevation": "561m",
+      "location": "Purisima Creek Redwoods Open Space Preserve",
+      "conditions": "Open year-round. Trail is well-maintained. Best hiked in cooler months.",
+      "description": "A challenging out-and-back trail through towering redwoods alongside Purisima Creek. Features significant elevation gain with rewarding views of the coast on clear days."
     }
   ]
 }

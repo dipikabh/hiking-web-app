@@ -304,3 +304,13 @@ footer {
         display: block;
     }
 }
+
+/* Visual indicator for out-of-scope pages */
+body[data-scope="out"] {
+    border-top: 4px solid #ff4444;
+}
+
+/* Visual indicator for in-scope pages */
+body[data-scope="in"] {
+    border-top: 4px solid #4CAF50;
+}

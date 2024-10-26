@@ -7,18 +7,35 @@ async function loadTrails() {
         const trailList = document.getElementById('trailList');
         if (!trailList) return; // Only run on pages with trailList element
 
+        // Clear existing cards
+        trailList.innerHTML = '';
+
         data.trails.forEach(trail => {
             const card = document.createElement('div');
             card.className = 'trail-card';
             card.innerHTML = `
                 <h2>${trail.name}</h2>
                 <span class="difficulty">${trail.difficulty}</span>
-                <div class="details">
-                    <p>Length: ${trail.length}</p>
-                    <p>Elevation: ${trail.elevation}</p>
-                    <p>Location: ${trail.location}</p>
+                <div class="trail-stats">
+                    <div class="stat">
+                        <span class="icon">📏</span>
+                        <span class="value">${trail.length}</span>
+                    </div>
+                    <div class="stat">
+                        <span class="icon">⛰️</span>
+                        <span class="value">${trail.elevation}</span>
+                    </div>
                 </div>
-                <a href="/trails/${trail.id}.html">View Details</a>
+                <div class="trail-location">
+                    <span class="icon">📍</span>
+                    <span>${trail.location}</span>
+                </div>
+                <p class="trail-description">${trail.description}</p>
+                <div class="trail-conditions">
+                    <span class="icon">ℹ️</span>
+                    <span>${trail.conditions}</span>
+                </div>
+                <a href="/trails/${trail.id}.html" class="view-trail">View Trail Details</a>
             `;
             trailList.appendChild(card);
         });
@@ -98,3 +115,16 @@ async function loadTrails() {
         console.error('Error loading trails:', error);
     }
 }
+
+// Check if current page is within scope
+function checkScope() {
+    const currentPath = window.location.pathname;
+    const isInScope = currentPath.startsWith('/trails/');
+    document.body.setAttribute('data-scope', isInScope ? 'in' : 'out');
+}
+
+// Initialize
+document.addEventListener('DOMContentLoaded', () => {
+    loadTrails();
+    checkScope();
+});

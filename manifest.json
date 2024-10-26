@@ -1,5 +1,5 @@
 {
-    "name": "Trail Tracker",
+    "name": "Trail Navigator",
     "short_name": "Trails",
     "description": "Discover and track hiking trails",
     "scope": "/trails/",
@@ -8,7 +8,7 @@
     "background_color": "#ffffff",
     "theme_color": "#4CAF50",
     "orientation": "any",
-    "id": "trail-tracker-v1",
+    "id": "trail-Navigator-v1",
     "icons": [
       {
         "src": "/images/icon-192.png",

@@ -5,6 +5,7 @@
     --background-color: #fff;
 }
 
+/* Base styles */
 body {
     margin: 0;
     padding: 0;
@@ -14,6 +15,7 @@ body {
     background-color: var(--background-color);
 }
 
+/* Header and Navigation */
 header {
     background-color: var(--primary-color);
     color: white;
@@ -44,125 +46,14 @@ nav ul li a {
     text-decoration: none;
 }
 
+/* Main content */
 main {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 0 1rem;
 }
 
-footer {
-    background-color: #f5f5f5;
-    padding: 1rem;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-.trail-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
-    padding: 1rem;
-}
-
-.trail-card {
-    background: white;
-    border-radius: 8px;
-    padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.trail-card h2 {
-    color: var(--primary-color);
-    margin-top: 0;
-}
-
-.trail-card .difficulty {
-    display: inline-block;
-    padding: 0.25rem 0.5rem;
-    border-radius: 4px;
-    background: #e0e0e0;
-    font-size: 0.9rem;
-}
-
-.trail-card .details {
-    margin: 1rem 0;
-}
-
-.trail-card a {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background: var(--primary-color);
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-}
-
-/* About page styles */
-.about-content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1rem;
-}
-
-.about-content h2 {
-    color: var(--primary-color);
-    margin-top: 2rem;
-}
-
-.about-content ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.about-content ul li {
-    margin: 0.5rem 0;
-    padding-left: 1.5rem;
-    position: relative;
-}
-
-.about-content ul li:before {
-    content: "•";
-    color: var(--primary-color);
-    position: absolute;
-    left: 0;
-}
-
-/* Settings page styles */
-.settings-content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1rem;
-}
-
-.settings-section {
-    margin: 2rem 0;
-    padding: 1rem;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.setting-item {
-    margin: 1rem 0;
-}
-
-.setting-item label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-}
-
-.setting-item select {
-    padding: 0.5rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    width: 100%;
-    max-width: 200px;
-}
-
-/* Hero section styles */
+/* Hero section */
 .hero {
     background-color: var(--primary-color);
     color: white;
@@ -187,6 +78,119 @@ footer {
     margin-top: 1rem;
 }
 
+/* Trail Cards */
+.trail-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.trail-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.trail-card:hover {
+    transform: translateY(-2px);
+}
+
+.trail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.trail-header h2 {
+    color: var(--primary-color);
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+/* Difficulty badges */
+.difficulty {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.difficulty.easy {
+    background: #e0f2e9;
+    color: #2d6a4f;
+}
+
+.difficulty.moderate {
+    background: #fff3bf;
+    color: #937100;
+}
+
+.difficulty.difficult {
+    background: #ffe3e3;
+    color: #c92a2a;
+}
+
+/* Trail stats and details */
+.trail-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.icon {
+    font-size: 1.2rem;
+}
+
+.trail-location {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666;
+    margin: 1rem 0;
+}
+
+.trail-description {
+    margin: 1rem 0;
+    line-height: 1.6;
+    color: #444;
+}
+
+.trail-conditions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    padding: 0.75rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.view-trail {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+.view-trail:hover {
+    background: var(--secondary-color);
+}
+
 /* Trail detail page styles */
 .trail-detail {
     max-width: 800px;
@@ -194,107 +198,57 @@ footer {
     padding: 1rem;
 }
 
-.trail-stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
-    margin: 2rem 0;
+.trail-detail h1 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.trail-detail .trail-stats {
     background: white;
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.stat {
-    text-align: center;
-}
-
-.stat .label {
-    display: block;
-    color: #666;
-    font-size: 0.9rem;
-}
-
-.stat .value {
-    display: block;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: var(--primary-color);
-    margin-top: 0.5rem;
-}
-
-.trail-description,
-.trail-conditions {
-    background: white;
+/* Footer */
+footer {
+    background-color: #f5f5f5;
     padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin: 1rem 0;
-}
-
-.trail-description h2,
-.trail-conditions h2 {
-    color: var(--primary-color);
-    margin-top: 0;
-}
-
-/* Featured trails section */
-.featured-trails {
-    padding: 2rem 0;
-}
-
-.featured-trails h2 {
     text-align: center;
-    color: var(--primary-color);
-    margin-bottom: 2rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
-/* Display mode indicator styles */
-#displayMode {
-    background: #f5f5f5;
-    padding: 0.5rem;
-    border-radius: 4px;
-    font-family: monospace;
-}
-
-.display-note {
+/* Scope testing styles */
+.scope-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 4px;
+    text-align: center;
     font-size: 0.9rem;
-    color: #666;
-    margin-top: 0.5rem;
+    z-index: 1000;
 }
 
-/* Deep linking test styles */
-.deep-link-test {
-    background: #f5f5f5;
-    padding: 1rem;
-    border-radius: 8px;
-    margin-bottom: 2rem;
+body[data-scope="in"] .scope-indicator {
+    background-color: #4CAF50;
+    color: white;
 }
 
-.deep-link-test h2 {
-    color: var(--primary-color);
-    margin-top: 0;
+body[data-scope="out"] .scope-indicator {
+    background-color: #ff4444;
+    color: white;
 }
 
-.deep-link-test ul {
-    list-style-type: none;
-    padding: 0;
+/* Deep linking styles */
+.highlighted {
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
 }
 
-.deep-link-test li {
-    margin: 0.5rem 0;
-}
-
-.deep-link-test a {
-    color: var(--primary-color);
-    text-decoration: none;
-}
-
-.deep-link-test a:hover {
-    text-decoration: underline;
-}
-
-/* Standalone mode specific styles */
+/* Display mode styles */
 @media (display-mode: standalone) {
     .browser-only {
         display: none;
@@ -303,14 +257,4 @@ footer {
     .standalone-only {
         display: block;
     }
-}
-
-/* Visual indicator for out-of-scope pages */
-body[data-scope="out"] {
-    border-top: 4px solid #ff4444;
-}
-
-/* Visual indicator for in-scope pages */
-body[data-scope="in"] {
-    border-top: 4px solid #4CAF50;
 }

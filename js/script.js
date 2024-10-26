@@ -1,4 +1,4 @@
-// Load trail data
+// Load and display trail data
 async function loadTrails() {
     try {
         const response = await fetch('/data/trails.json');
@@ -14,8 +14,10 @@ async function loadTrails() {
             const card = document.createElement('div');
             card.className = 'trail-card';
             card.innerHTML = `
-                <h2>${trail.name}</h2>
-                <span class="difficulty">${trail.difficulty}</span>
+                <div class="trail-header">
+                    <h2>${trail.name}</h2>
+                    <span class="difficulty ${trail.difficulty.toLowerCase()}">${trail.difficulty}</span>
+                </div>
                 <div class="trail-stats">
                     <div class="stat">
                         <span class="icon">📏</span>
@@ -51,12 +53,6 @@ function checkDisplayMode() {
     }
 }
 
-// Initialize
-document.addEventListener('DOMContentLoaded', () => {
-    loadTrails();
-    checkDisplayMode();
-});
-
 // Display mode detection and testing
 function updateDisplayMode() {
     const displayModeElement = document.getElementById('displayMode');
@@ -81,50 +77,32 @@ function handleDeepLink() {
     
     if (trailId) {
         console.log(`Deep linked to trail: ${trailId}`);
-        // You can add logic here to navigate to the specific trail
+        // Highlight the specific trail if it exists
+        const trailElement = document.querySelector(`[data-trail-id="${trailId}"]`);
+        if (trailElement) {
+            trailElement.classList.add('highlighted');
+        }
     }
 }
 
-// Update event listeners in the initialization
-document.addEventListener('DOMContentLoaded', () => {
-    loadTrails();
-    checkDisplayMode();
-    updateDisplayMode();
-    handleDeepLink();
-    
-    // Listen for display mode changes
-    window.matchMedia('(display-mode: standalone)').addEventListener('change', updateDisplayMode);
-});
-
-// Modify loadTrails() in script.js to clear existing cards first
-async function loadTrails() {
-    try {
-        const response = await fetch('/data/trails.json');
-        const data = await response.json();
-        
-        const trailList = document.getElementById('trailList');
-        if (!trailList) return;
-
-        // Clear existing cards
-        trailList.innerHTML = '';
-        
-        data.trails.forEach(trail => {
-            // ... rest of the code
-        });
-    } catch (error) {
-        console.error('Error loading trails:', error);
-    }
-}
-
-// Check if current page is within scope
+// Check if current page is within scope and add visual indicator
 function checkScope() {
     const currentPath = window.location.pathname;
     const isInScope = currentPath.startsWith('/trails/');
     document.body.setAttribute('data-scope', isInScope ? 'in' : 'out');
+
+    // Add scope indicator for testing
+    const scopeIndicator = document.createElement('div');
+    scopeIndicator.className = 'scope-indicator';
+    scopeIndicator.textContent = `Page ${isInScope ? 'is' : 'is not'} within scope`;
+    document.body.insertBefore(scopeIndicator, document.body.firstChild);
 }
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
     loadTrails();
     checkScope();
+    handleDeepLink();
+    checkDisplayMode();
+    updateDisplayMode();
 });

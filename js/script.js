@@ -85,23 +85,23 @@ function handleDeepLink() {
     }
 }
 
-// Check if current page is within scope and add visual indicator
-function checkScope() {
-    const currentPath = window.location.pathname;
-    const isInScope = currentPath.startsWith('/trails/');
-    document.body.setAttribute('data-scope', isInScope ? 'in' : 'out');
+// // Check if current page is within scope and add visual indicator
+// function checkScope() {
+//     const currentPath = window.location.pathname;
+//     const isInScope = currentPath.startsWith('/trails/');
+//     document.body.setAttribute('data-scope', isInScope ? 'in' : 'out');
 
-    // Add scope indicator for testing
-    const scopeIndicator = document.createElement('div');
-    scopeIndicator.className = 'scope-indicator';
-    scopeIndicator.textContent = `Page ${isInScope ? 'is' : 'is not'} within scope`;
-    document.body.insertBefore(scopeIndicator, document.body.firstChild);
-}
+//     // Add scope indicator for testing
+//     const scopeIndicator = document.createElement('div');
+//     scopeIndicator.className = 'scope-indicator';
+//     scopeIndicator.textContent = `Page ${isInScope ? 'is' : 'is not'} within scope`;
+//     document.body.insertBefore(scopeIndicator, document.body.firstChild);
+// }
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
     loadTrails();
-    checkScope();
+    // checkScope();
     handleDeepLink();
     checkDisplayMode();
     updateDisplayMode();

@@ -5,8 +5,8 @@
     "scope": "/trails/",
     "start_url": "/trails/",
     "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color": "#2B6CB0",
+    "theme_color": "#FFFFFF",
+    "background_color": "#FFFFFF",
     "orientation": "any",
     "id": "trail-Navigator-v1",
     "icons": [

@@ -3,52 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trail Navigator - Blog</title>
+    <title>Blog & Resources - Trail Navigator</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="/trails/">Home</a></li>
-                <li><a href="/trails/trail-list.html">Trails</a></li>
-                <li><a href="/blog/">Blog</a></li>
-                <li><a href="/resources/">Resources</a></li>
-                <li><a href="/trails/about/">About</a></li>
-                <li><a href="/trails/settings/">Settings</a></li>
-            </ul>
-        </nav>
-    </header>
-
     <main>
+        <div class="app-header">
+            <h1>Trail Navigator</h1>
+        </div>
+        <h1>Latest Blog Articles</h1>
         <div class="blog-content">
-            <h1>Trail Navigator Blog</h1>
-            <div class="blog-grid">
-                <article class="blog-card">
-                    <div class="blog-info">
-                        <h2>Essential Trail Safety Tips</h2>
-                        <p>Planning your first hike? Here are crucial safety tips to keep in mind before hitting the trails. Learn about proper gear, weather preparation, and basic hiking etiquette.</p>
-                        <a href="#" class="read-more">Read More</a>
-                    </div>
-                </article>
+            <!-- Blog Posts Section -->
+            <section class="blog-section">
+                <div class="blog-grid">
+                    <article class="blog-card">
+                        <div class="blog-info">
+                            <h3>Essential Trail Safety Tips</h3>
+                            <p>Planning your first hike? Learn about proper gear, weather preparation, and basic hiking etiquette.</p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </article>
 
-                <article class="blog-card">
-                    <div class="blog-info">
-                        <h2>Best Hiking Seasons in Bay Area</h2>
-                        <p>Discover the perfect times to explore Bay Area trails. From spring wildflowers to fall colors, each season offers unique hiking experiences.</p>
-                        <a href="#" class="read-more">Read More</a>
-                    </div>
-                </article>
+                    <article class="blog-card">
+                        <div class="blog-info">
+                            <h3>Best Hiking Seasons in Bay Area</h3>
+                            <p>Discover the perfect times to explore Bay Area trails, from spring wildflowers to fall colors.</p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
 
-                <article class="blog-card">
-                    <div class="blog-info">
-                        <h2>Trail Photography Tips</h2>
-                        <p>Capture the beauty of your hikes with these photography tips. Learn about lighting, composition, and the best gear for trail photography.</p>
-                        <a href="#" class="read-more">Read More</a>
+            <!-- Featured Resources Section -->
+            <section class="resources-section">
+                <h2>Resources</h2>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <h3>Weather Services</h3>
+                        <p>Check current conditions before your hike:</p>
+                        <ul class="resource-links">
+                            <li><a href="#">Local Weather Forecast</a></li>
+                            <li><a href="#">Trail Conditions Updates</a></li>
+                        </ul>
                     </div>
-                </article>
-            </div>
+                    <div class="resource-card">
+                        <h3>Emergency Contacts</h3>
+                        <p>Important numbers for trail emergencies</p>
+                        <ul class="resource-links">
+                            <li><a href="#">Park Rangers</a></li>
+                            <li><a href="#">Emergency Services</a></li>
+                        </ul>
+                    </div>
+                    <div class="resource-card">
+                        <h3>Park Information</h3>
+                        <p>Essential park details and guidelines:</p>
+                        <ul class="resource-links">
+                            <li><a href="#">Park Hours & Access</a></li>
+                            <li><a href="#">Trail Rules & Safety</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
+
+    <nav class="bottom-nav">
+        <ul>
+            <li>
+                <a href="/trails/">
+                    <span class="material-icons">home</span>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="/trails/trail-list.html">
+                    <span class="material-icons">explore</span>
+                    <span>Trails</span>
+                </a>
+            </li>
+            <li>
+                <a href="/blog/">
+                    <span class="material-icons">article</span>
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="/trails/settings/">
+                    <span class="material-icons">settings</span>
+                    <span>Settings</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
 </body>
 </html>

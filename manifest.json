@@ -6,7 +6,7 @@
     "start_url": "/trails/",
     "display": "standalone",
     "background_color": "#ffffff",
-    "theme_color": "#4CAF50",
+    "theme_color": "#2B6CB0",
     "orientation": "any",
     "id": "trail-Navigator-v1",
     "icons": [

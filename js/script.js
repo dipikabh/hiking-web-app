@@ -18,26 +18,12 @@ async function loadTrails() {
                     <h2>${trail.name}</h2>
                     <span class="difficulty ${trail.difficulty.toLowerCase()}">${trail.difficulty}</span>
                 </div>
-                <div class="trail-stats">
-                    <div class="stat">
-                        <span class="icon">📏</span>
-                        <span class="value">${trail.length}</span>
-                    </div>
-                    <div class="stat">
-                        <span class="icon">⛰️</span>
-                        <span class="value">${trail.elevation}</span>
-                    </div>
                 </div>
                 <div class="trail-location">
                     <span class="icon">📍</span>
                     <span>${trail.location}</span>
                 </div>
-                <p class="trail-description">${trail.description}</p>
-                <div class="trail-conditions">
-                    <span class="icon">ℹ️</span>
-                    <span>${trail.conditions}</span>
-                </div>
-                <a href="/trails/${trail.id}.html" class="view-trail">View Trail Details</a>
+                <a href="/trails/${trail.id}.html" class="view-trail">View Details</a>
             `;
             trailList.appendChild(card);
         });

@@ -10,44 +10,45 @@
 <body>
     <header>
         <nav>
-            <div class="logo">Trail Navigator</div>
             <ul>
-                <li><a href="/">Home</a></li>
+                <li><a href="/trails/">Home</a></li>
                 <li><a href="/trails/trail-list.html">Trails</a></li>
-                <li><a href="/about/">About</a></li>
-                <li><a href="/settings/">Settings</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/resources/">Resources</a></li>
+                <li><a href="/trails/about/">About</a></li>
+                <li><a href="/trails/settings/">Settings</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1>Settings</h1>
         <div class="settings-content">
-            <section class="settings-section">
+            <h1>Settings</h1>
+            
+            <div class="settings-group">
                 <h2>Display Preferences</h2>
                 <div class="setting-item">
-                    <label for="units">Distance Units</label>
-                    <select id="units">
+                    <span class="setting-label">Distance Units:</span>
+                    <select id="distanceUnit">
                         <option value="km">Kilometers</option>
                         <option value="mi">Miles</option>
                     </select>
                 </div>
-            </section>
-
-            <section class="settings-section">
+                <div class="setting-item">
+                    <span class="setting-label">Elevation Units:</span>
+                    <select id="elevationUnit">
+                        <option value="m">Meters</option>
+                        <option value="ft">Feet</option>
+                    </select>
+                </div>
+            </div>
+        
+            <div class="settings-group">
                 <h2>App Information</h2>
                 <div class="setting-item">
-                    <p>Version: 1.0</p>
-                    <p>Storage used: 0.5 MB</p>
+                    <span class="setting-label">Version:</span>
+                    <span>1.2.0</span>
                 </div>
-            </section>
-
-            <section class="settings-section">
-                <h2>Display Information</h2>
-                <div class="setting-item">
-                    <p id="displayMode">Current display mode: checking...</p>
-                    <p class="display-note">This information helps test different manifest display modes.</p>
-                </div>
-            </section>
+            </div>
         </div>
     </main>
     <script src="/js/script.js"></script>
